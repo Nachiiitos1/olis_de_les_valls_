@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #main-header {
+    background-color: #800000; /* Granate */
+    color: #fff; /* Texto blanco */
+    padding: 10px 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+      

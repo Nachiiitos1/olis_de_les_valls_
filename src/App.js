@@ -1,9 +1,14 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './header'; // Importa el componente Header
 
 function App() {
   return (
     <div className="App">
+      {/* Componente Header */}
+      <Header />
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
