@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from './header';
-import videoSource from './video.mp4'; // Ruta a tu archivo de video
+import videoSource from './Assets/Images/VideoOlivos.mp4'; // Ruta a tu archivo de video
 
 function Home() {
   return (
