@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from './header';
 import videoSource from './Assets/Images/VideoOlivos.mp4'; // Ruta a tu archivo de video
+import WhatsappButton from './whatsapp'
 
 function Home() {
   return (
@@ -14,10 +15,11 @@ function Home() {
           Your browser does not support the video tag.
         </video>
         <div style={textOverlayStyle}>
-          <h1 style={textStyle}></h1>
+          <h1 style={textStyle}>Oli de les valls</h1>
         </div>
       </div>
-      {/* Tu contenido aquí */}
+
+      <WhatsappButton/>
     </div>
   );
 }
