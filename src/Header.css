@@ -1,20 +1,66 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  #main-header {
-    background-color: #800000; /* Granate */
-    color: #fff; /* Texto blanco */
-    padding: 10px 0;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-      
+/* Header.css */
+
+#main-header {
+  background-color: #582c44; /* Granate */
+  color: #fff; /* Texto blanco */
+  padding: 0,1px 2;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-right: auto; /* Agregamos marginRight: 'auto' */
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 30px; /* Ajusta el margen izquierdo y derecho aquí */
+}
+
+/* Agrega los estilos para Header2 aquí */
+
+#second-header {
+  background-color: ''; /* Color de fondo de tu elección */
+  color: black; /* Color de texto */
+  padding: 20px 0; /* Ajusta el relleno según sea necesario */
+  display: flex;
+  align-items: center;
+}
+
+#second-header .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#second-header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px; /* Tamaño de la letra */
+}
+
+#second-header ul li {
+  font-weight: bold;
+  letter-spacing: -1px; /* Ajusta el espacio entre las letras para que estén más juntas */
+    
+}
+
+#second-header ul li a {
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: black; /* Color de texto predeterminado */
+  transition: color 0.3s; /* Transición suave del color del texto */
+}
+
+#second-header ul li a:hover {
+  color: #6ab04c; /* Cambia el color del texto a verde claro al pasar el cursor por encima */
+}
