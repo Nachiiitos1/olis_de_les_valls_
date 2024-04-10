@@ -5,15 +5,15 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Header1() {
-  const [displayText, setDisplayText] = useState("Enviament Gratuït a partir de 145€ (nomes peninsula)");
+  const [displayText, setDisplayText] = useState("ENVIAMENT GRATUÏT A PARTIR DE 145€ (NOMÉS PENINSULA)");
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayText((prevText) => {
-        if (prevText === "Enviament Gratuït a partir de 145€ (nomes peninsula)") {
-          return "Atencio al client +34 973 160 000";
+        if (prevText === "ENVIAMENT GRATUÏT A PARTIR DE 145€ (NOMÉS PENINSULA)") {
+          return "ATENCIO AL CLIENT +34 973 160 000";
         } else {
-          return "Enviament Gratuït a partir de 145€ (nomes peninsula)";
+          return "ENVIAMENT GRATUÏT A PARTIR DE 145€ (NOMÉS PENINSULA)";
         }
       });
     }, 5000); // Cambiar cada 5 segundos
@@ -37,24 +37,23 @@ function Header1() {
 
 function Header2() {
   return (
-    <header id="second-header" className="second-header">
+    <header id="second-header" className="sticky-header">
       <div className="container">
         <nav>
           <ul>
-            <li><a href="/botiga">Botiga</a></li>
-            <li><a href="/nostre-oli">Nostre oli</a></li>
-            <li><a href="/activitats">Activitats</a></li>
-            <li><a href="/receptes">Receptes</a></li>
-            <li><a href="/arbequina">Arbequina</a></li>
-            <li><a href="/cooperativa">Cooperativa</a></li>
-            <li><a href="/socis">Socis</a></li>
-            <li><a href="/noticies">Noticies</a></li>
-            <li><a href="/contacte">Contacte</a></li>
+            <li>Botiga</li>
+            <li>Nostre oli</li>
+            <li>Activitats</li>
+            <li>Receptes</li>
+            <li>Arbequina</li>
+            <li>Cooperativa</li>
+            <li>Socis</li>
+            <li>Noticies</li>
+            <li>Contacte</li>
           </ul>
         </nav>
       </div>
     </header>
   );
 }
-
 export { Header1, Header2 };
