@@ -21,6 +21,7 @@ function Header1() {
     return () => clearInterval(interval); // Limpia el intervalo cuando el componente se desmonta
   }, []); // Se ejecuta solo una vez al montar el componente
 
+  
   return (
     <header id="main-header">
       <div className="container">

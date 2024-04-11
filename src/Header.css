@@ -7,21 +7,33 @@
   height: auto;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Ajuste para distribuir el espacio entre elementos */
   font-size: 16px; /* Tamaño de la letra */
   
   margin-bottom: 10px; /* Agrega margen inferior */
 }
 
+
 .container {
   width: 80%;
   margin: 0 auto;
-  margin-right: auto; /* Agregamos marginRight: 'auto' */
+  margin-left: auto; /* Ajustamos marginLeft: 'auto' para mover el contenido hacia la derecha */
   text-align: center; /* Centra el texto horizontalmente */
 }
+
 
 .container h1 {
   margin: 5px 0; /* Ajusta el margen superior e inferior del texto */
   font-size: 14px; /* Tamaño de la letra más pequeño */
+  margin-left: 200px; /* Reiniciamos el margen izquierdo */
+}
+
+.container.h1-left {
+  margin-left: 100px; /* Ajusta el margen izquierdo a 100px */
+}
+
+.container.h1-right {
+  margin-left: auto; /* Mueve el texto hacia la derecha */
 }
 
 .header-icons {
