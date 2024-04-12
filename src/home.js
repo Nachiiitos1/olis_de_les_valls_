@@ -1,55 +1,118 @@
-// home.js
-
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './header';
-import videoSource from './Assets/Images/VideoOlivos.mp4'; // Ruta a tu archivo de video
-import WhatsappButton from './whatsapp'
+import videoSource from './Assets/Images/VideoOlivos.mp4'; 
+import WhatsappButton from './whatsapp';
+import image1 from './Assets/Images/aceite.png';
+import receta1 from './Assets/Images/receta1.jpg'
+import './styles.css';
 
 function Home() {
+  const [hoveredButtonIndex, setHoveredButtonIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredButtonIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredButtonIndex(null);
+  };
+
   return (
     <div>
       <Header />
-      <div style={videoBackgroundStyle}>
-        <video autoPlay loop muted style={videoStyle}>
+      <div className="videoBackground">
+        <video autoPlay loop muted className="videoStyle">
           <source src={videoSource} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div style={textOverlayStyle}>
-          <h1 style={textStyle}>Oli de les valls</h1>
+        <div className="textOverlay">
+          <h1 className="textStyle">Oli de les valls</h1>
         </div>
       </div>
 
-      <WhatsappButton/>
+      <div className="subtitleStyle1">Los más vendidos</div>
+
+      <div className="productContainer">
+        <div className="productItem">
+          <img src={image1} alt="Producto 1" className="productImage" />
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+            <p className="productPriceStyle">32€</p>
+          </div>
+          <button
+            className="buttonStyle"
+            onMouseEnter={() => handleMouseEnter(0)}
+            onMouseLeave={handleMouseLeave}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+        <div className="productItem">
+          <img src={image1} alt="Producto 1" className="productImage" />
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+            <p className="productPriceStyle">6€</p>
+          </div>
+          <button
+            className="buttonStyle"
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+        <div className="productItem">
+          <img src={image1} alt="Producto 1" className="productImage" />
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+            <p className="productPriceStyle">10€</p>
+          </div>
+          <button
+            className="buttonStyle"
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+      </div>
+
+      <div className="newsContainer">
+        <div className="subtitleStyle2">Noticias y Recetas</div>
+        <div className="newsItemsContainer">
+          <div className="newsItem">
+            <img src={receta1} alt="Noticia 1" className="newsImage" />
+            <div>
+              <p className="newsTextStyle1">Título de la noticia 1</p>
+              <p className="newsTextStyle2">Descripción de la noticia 1</p>
+              <button className="newsButtonStyle">LEER MÁS</button>
+            </div>
+          </div>
+          <div className="newsItem">
+            <img src={receta1} alt="Noticia 2" className="newsImage" />
+            <div>
+              <p className="newsTextStyle1">Título de la noticia 2</p>
+              <p className="newsTextStyle2">Descripción de la noticia 2</p>
+              <button className="newsButtonStyle">LEER MÁS</button>
+            </div>
+          </div>
+          <div className="newsItem">
+            <img src={receta1} alt="Noticia 3" className="newsImage" />
+            <div>
+              <p className="newsTextStyle1">Título de la noticia 3</p>
+              <p className="newsTextStyle2">Descripción de la noticia 3</p>
+              <button className="newsButtonStyle">LEER MÁS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <WhatsappButton />
     </div>
   );
 }
-
-const videoBackgroundStyle = {
-  position: 'relative',
-  width: '100%',
-  minHeight: 'calc(100vh - 100px)', // Ajusta el valor según la altura de tu header
-};
-
-const videoStyle = {
-  position: 'absolute',
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-};
-
-const textOverlayStyle = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  textAlign: 'center',
-  width: '100%',
-};
-
-const textStyle = {
-  color: 'white',
-  fontSize: '3rem',
-  // Estilos adicionales según sea necesario
-};
 
 export default Home;
