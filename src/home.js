@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Header from './header';
 import videoSource from './Assets/Images/VideoOlivos.mp4'; 
-import WhatsappButton from './whatsapp';
+import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
 import receta1 from './Assets/Images/receta1.jpg'
+import BotonDeslizante from './components/botondeslizante';
 import './styles.css';
 
 function Home() {
@@ -109,7 +110,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+      <BotonDeslizante/>
       <WhatsappButton />
     </div>
   );
