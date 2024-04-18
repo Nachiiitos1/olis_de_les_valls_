@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Header1() {
+function Header() {
   const [displayText, setDisplayText] = useState("ENVIAMENT GRATUÏT A PARTIR DE 145€ (NOMÉS PENINSULA)");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,30 +21,24 @@ function Header1() {
 
     return () => clearInterval(interval); // Limpia el intervalo cuando el componente se desmonta
   }, []); // Se ejecuta solo una vez al montar el componente
-
   
   return (
-    <header id="main-header">
+    <header id="main-header" className="transparent-header"> {/* Agregamos la clase transparent-header */}
       <div className="container">
         <h1>{displayText}</h1>
-      </div>
-      <div className="header-icons">
-        <FontAwesomeIcon icon={faFacebook} style={{ marginRight: '5px' }} />
-        <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '5px' }} />
-        <FontAwesomeIcon icon={faEnvelope} />
-      </div>
-    </header>
-  );
-}
-
-function Header2() {
-  return (
-    <header id="second-header" className="sticky-header">
-      <div className="container">
         <nav>
           <ul>
             <li>Botiga</li>
-            <li>Nostre oli</li>
+            <li onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
+              Nostre oli
+              {showDropdown && (
+                <ul className="dropdown-menu-column"> {/* Clase CSS para mostrar las opciones en columna */}
+                  <li>l'oli</li>
+                  <li>oliva arbequina</li>
+                  <li>el nostre entorn</li>
+                </ul>
+              )}
+            </li>
             <li>Activitats</li>
             <li>Receptes</li>
             <li>Arbequina</li>
@@ -54,7 +49,13 @@ function Header2() {
           </ul>
         </nav>
       </div>
+      <div className="header-icons">
+        <FontAwesomeIcon icon={faFacebook} style={{ marginRight: '5px' }} />
+        <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '5px' }} />
+        <FontAwesomeIcon icon={faEnvelope} />
+      </div>
     </header>
   );
 }
-export { Header1, Header2 };
+
+export default Header;
