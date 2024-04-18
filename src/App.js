@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Header />} /> {/* Renderiza Header en la ruta / */}
-        <Route path="/contacte" element={<Contacte />} /> {/* Renderiza Contacte en la ruta /contacte */}
+        <Route path="/contacte" element={Contacte } /> 
         
       </Routes>
     </Router>

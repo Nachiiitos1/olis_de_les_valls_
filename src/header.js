@@ -3,11 +3,12 @@ import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { BrowserRouter,Route, Link } from 'react-router-dom';
 
 function Header() {
   const [displayText, setDisplayText] = useState("ENVIAMENT GRATUÏT A PARTIR DE 145€ (NOMÉS PENINSULA)");
   const [showDropdown, setShowDropdown] = useState(false);
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayText((prevText) => {
@@ -45,7 +46,7 @@ function Header() {
             <li>Cooperativa</li>
             <li>Socis</li>
             <li>Noticies</li>
-            <li>Contacte</li>
+            <li><Link to="Contacte">Contacte</Link></li>
           </ul>
         </nav>
       </div>
