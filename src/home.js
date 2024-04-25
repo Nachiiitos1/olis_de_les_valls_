@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Header from './header';
-import videoSource from './Assets/Images/VideoOlivos.mp4'; 
+import Header from './header'
+//import videoSource from './Assets/Images/VideoOlivos.mp4'; 
+import videoSource from './Assets/Images/VideoOlivos2.mp4'; 
 import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
 import receta1 from './Assets/Images/receta1.jpg'
+import imagenvideo from './Assets/Images/iconosVideo.png'
 import BotonDeslizante from './components/botondeslizante';
 import './styles.css';
 
@@ -27,7 +29,11 @@ function Home() {
           Your browser does not support the video tag.
         </video>
         <div className="textOverlay">
-          <h1 className="textStyle">Oli de les valls</h1>
+          <h1 className="textStyle1 fade-in">olis mas</h1>
+          <h1 className="textStyle2 fade-in">de les valls</h1>
+        </div>
+        <div className="imageOverlay">
+          <img src={imagenvideo} alt="Icono de video" className="videoIcon" />
         </div>
       </div>
 
@@ -79,6 +85,11 @@ function Home() {
             SELECCIONAR OPCIONES
           </button>
         </div>
+      </div>
+
+      {/* Botón "Ver más" */}
+      <div className="buttonContainer">
+        <a href="/tienda" className="verMasButton">Ver más</a>
       </div>
 
       <div className="newsContainer">
