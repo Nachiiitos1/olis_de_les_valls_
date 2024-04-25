@@ -27,6 +27,7 @@ function Header() {
     <header id="main-header" className="transparent-header"> {/* Agregamos la clase transparent-header */}
       <div className="container">
         <h1>{displayText}</h1>
+      
         <nav>
           <ul>
             <li>Botiga</li>
@@ -50,11 +51,11 @@ function Header() {
           </ul>
         </nav>
       </div>
-      <div className="header-icons">
+      {/* <div className="header-icons">
         <FontAwesomeIcon icon={faFacebook} style={{ marginRight: '5px' }} />
         <FontAwesomeIcon icon={faInstagram} style={{ marginRight: '5px' }} />
         <FontAwesomeIcon icon={faEnvelope} />
-      </div>
+      </div> */}
     </header>
   );
 }
