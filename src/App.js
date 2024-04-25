@@ -1,18 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa BrowserRouter
-import Header from './header'; // Importa tu componente Header.js
-import Contacte from './Contacte'; // Importa tu componente Contacte.njs
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        
-        <Route path="/" element={<Header />} /> {/* Renderniza Header en la ruta / */}
-        <Route path="/Contacte" element={<Contacte/> } /> 
-        
-      </Routes>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
