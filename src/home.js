@@ -7,6 +7,7 @@ import image1 from './Assets/Images/aceite.png';
 import receta1 from './Assets/Images/receta1.jpg'
 import imagenvideo from './Assets/Images/iconosVideo.png'
 import BotonDeslizante from './components/botondeslizante';
+import Footer from './components/footer';
 import './styles.css';
 
 function Home() {
@@ -123,6 +124,10 @@ function Home() {
       </div>
       <BotonDeslizante/>
       <WhatsappButton />
+      <div>
+        <br></br>
+      </div>
+      <Footer/>
     </div>
   );
 }
