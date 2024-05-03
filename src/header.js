@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './header.css';
-import logo from './Assets/Images/logofondo.png'
+import logo from './Assets/Images/logofondo.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -28,24 +28,9 @@ function Header() {
           </div>
         </div>
       </header>
-      <header className="second-header">
-        <div className="text-container">
-          <a href="/ruta-1" className="text">Texto 1</a>
-          <a href="/ruta-2" className="text">Texto 2</a>
-          <a href="/tienda" className="text">Tienda</a>
-          <a href="/ruta-4" className="text">Texto 4</a>
-          <Link to="/">
-            <div className="image-container">
-              <img src={logo} alt="Imagen" className="image" />
-            </div>
-          </Link>
-          <a href="/ruta-5" className="text">Texto 5</a>
-          <a href="/ruta-6" className="text">Texto 6</a>
-          <a href="/ruta-7" className="text">Texto 7</a>
-          <a href="/ruta-8" className="text">Texto 8</a>
-        </div>
-
-      </header>
+      <div className="content">
+        {/* Espacio para el contenido de la página debajo del primer header */}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './header'
 //import videoSource from './Assets/Images/VideoOlivos.mp4'; 
-import videoSource from './Assets/Images/VideoOlivos2.mp4'; 
+import videoSource from './Assets/Images/VideoOlivos.mp4'; 
 import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
 import receta1 from './Assets/Images/receta1.jpg'
@@ -9,6 +9,7 @@ import imagenvideo from './Assets/Images/iconosVideo.png'
 import BotonDeslizante from './components/botondeslizante';
 import Footer from './components/footer';
 import './styles.css';
+import logo from './Assets/Images/logofondo.png';
 
 function Home() {
   const [hoveredButtonIndex, setHoveredButtonIndex] = useState(null);
@@ -29,6 +30,19 @@ function Home() {
           <source src={videoSource} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className="second-header">
+        <div className="text-container">
+          <a href="/tienda" className="text">Tienda</a>
+          <a href="/ruta-1" className="text">Nuestros aceites</a>
+          <a href="/ruta-2" className="text">Historia</a>
+          <a href="/" className="image-container"> {/* Reemplaza '/' con la ruta correcta */}
+            <img src={logo} alt="Imagen" className="image" />
+          </a>
+          <a href="/ruta-5" className="text">Recetas</a>
+          <a href="/ruta-6" className="text">Noticias</a>
+          <a href="/ruta-7" className="text">Contacto</a>
+        </div>
+      </div>
         <div className="textOverlay">
           <h1 className="textStyle1 fade-in">olis mas</h1>
           <h1 className="textStyle2 fade-in">de les valls</h1>
