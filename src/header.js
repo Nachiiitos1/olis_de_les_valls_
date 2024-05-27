@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './header.css';
 import logo from './Assets/Images/logofondo.png'
 import { Link } from 'react-router-dom';
+import './Noticies';
 
 function Header() {
   const [texts, setTexts] = useState(["ENVIAMENT GRATUÏT ", "ATENCIÓ AL CLIENT: 654091283 "]);
@@ -41,8 +42,8 @@ function Header() {
           </Link>
           <a href="/ruta-5" className="text">Texto 5</a>
           <a href="/ruta-6" className="text">Texto 6</a>
-          <a href="/ruta-7" className="text">Texto 7</a>
-          <a href="/ruta-8" className="text">Texto 8</a>
+          <a href="/Noticies" className="text">Notícies</a>
+          <a href="/Contacte" className="text">Contacto</a>
         </div>
 
       </header>
