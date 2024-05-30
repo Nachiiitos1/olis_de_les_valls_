@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Header from './header'
-//import videoSource from './Assets/Images/VideoOlivos.mp4'; 
-import videoSource from './Assets/Images/VideoOlivos.mp4'; 
+
+import React, { useState, useEffect } from 'react';
+import Header from './header';
+import videoSource from './Assets/Images/VideoOlivos2.mp4';
 import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
 import image2 from './Assets/Images/aceite2.png';
@@ -10,7 +10,12 @@ import imagenvideo from './Assets/Images/iconosVideo.png';
 import BotonDeslizante from './components/botondeslizante';
 import Footer from './components/footer';
 import './styles.css';
-import logo from './Assets/Images/logofondo.png';
+import { CartButton, Cart } from './components/cart';
+import { db } from './firebase';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
+import logo from "./Assets/Images/logofondo.png"
 
 function Home() {
   const [isCartOpen, setIsCartOpen] = useState(false);
