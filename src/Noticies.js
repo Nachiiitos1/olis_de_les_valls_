@@ -1,4 +1,6 @@
+// Noticies.js
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "./header";
 import './noticies.css';
 import fotoLicor from './Assets/Images/foto_licor_ndp_horitzontal-768x628.jpg';
@@ -10,7 +12,7 @@ import Hombre from './Assets/Images/hombre_pisando_cesped.jpg';
 import Coperativa from './Assets/Images/la_transformacion_de_la_coperativa.jpg';
 import Produccio from './Assets/Images/produccio.jpg';
 import Microfono from './Assets/Images/microfono.jpg';
-import Tractor from './Assets/Images/tractor_ametlles-768x460.jpg';
+import TractorImage from './Assets/Images/tractor_ametlles-768x460.jpg';  // Importa la imagen con un alias
 import Imagen_3 from './Assets/Images/imagen_3.png';
 import Aceite_virgen from './Assets/Images/oli_aceite_virgen.jpg';
 
@@ -19,13 +21,15 @@ function Noticies() {
         { 
             url: fotoLicor, 
             text: 'La Cooperativa Arbequina estrena su propio licor de aceituna Arbequina',
-            description: 'La nostra cooperativa amplia la gamma de productes per tal de conquerir la sobretaula i els moments festius amb el nou licor d’oliva arbequina...'
+            description: 'La nostra cooperativa amplia la gamma de productes per tal de conquerir la sobretaula i els moments festius amb el nou licor d’oliva arbequina...',
+            link: "/FotoLicor"  // Asegúrate de que el enlace sea correcto
         },
 
         { 
-            url: Tractor, 
+            url: TractorImage, 
             text: 'Ajuda per les instal·lacions de producció i emmagatzematge d’ametlla',
-            description: 'La Generalitat ens ha ajudat en el projecte del trasllat i modernització de les instal·lacions de producció i emmagatzematge d’ametlla de la cooperativa...'
+            description: 'La Generalitat ens ha ajudat en el projecte del trasllat i modernització de les instal·lacions de producció i emmagatzematge d’ametlla de la cooperativa...',
+            link: "/Tractor"  // Asegúrate de que el enlace sea correcto
         },
         
         {
@@ -96,10 +100,18 @@ function Noticies() {
     return (
         <>
             <Header />
+         
             <div className="photo-grid">
                 {photos.map((photo, index) => (
                     <div key={index} className="photo-item">
-                        <img src={photo.url} alt={photo.text} />
+                        {photo.link ? (
+                            <Link to={photo.link}>
+                                <img src={photo.url} alt={photo.text} />
+                            </Link>
+                        ) : (
+                            <img src={photo.url} alt={photo.text} />
+                        )}
+                        
                         <p className="photo-text">{photo.text}</p>
                         <p className="description-text">{photo.description}</p>
                     </div>
@@ -110,4 +122,3 @@ function Noticies() {
 }
 
 export default Noticies;
-

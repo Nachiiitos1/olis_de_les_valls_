@@ -34,7 +34,7 @@ function Header() {
           <a href="/ruta-1" className="text">Texto 1</a>
           <a href="/ruta-2" className="text">Texto 2</a>
           <a href="/tienda" className="text">Tienda</a>
-          <a href="/ruta-4" className="text">Texto 4</a>
+          <a href="/Recetas" className="text">Recetas</a>
           <Link to="/">
             <div className="image-container">
               <img src={logo} alt="Imagen" className="image" />
