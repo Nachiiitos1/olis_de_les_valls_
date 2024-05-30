@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Header from './header';
+import Header from './headertienda';
 import Image1 from './Assets/Images/aceite.png'; // Importa las imágenes para el slider
 import Image2 from './Assets/Images/aceite2.png';
 import Image3 from './Assets/Images/aceite3.png';
@@ -20,12 +20,8 @@ function Slider() {
   return (
     <div>
       <Header />
-      <div className="slider-container">
-        <div className="slider-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {images.map((image, index) => (
-            <img key={index} src={image} alt={`Slide ${index + 1}`} className="slider-image" />
-          ))}
-        </div>
+      <div className="">
+        
       </div>
     </div>
   );

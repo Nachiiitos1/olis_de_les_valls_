@@ -3,7 +3,7 @@ import './header.css';
 import logo from './Assets/Images/logofondo.png'
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ toggleCart }) {
   const [texts, setTexts] = useState(["ENVIAMENT GRATUÏT ", "ATENCIÓ AL CLIENT: 654091283 "]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
@@ -30,7 +30,9 @@ function Header() {
       </header>
       <header className="second-header">
         <div className="text-container">
+          <div className='green-box'>
           <a href="/ruta-1" className="text">Texto 1</a>
+          </div>
           <a href="/ruta-2" className="text">Texto 2</a>
           <a href="/tienda" className="text">Tienda</a>
           <a href="/ruta-4" className="text">Texto 4</a>
@@ -44,7 +46,6 @@ function Header() {
           <a href="/ruta-7" className="text">Texto 7</a>
           <a href="/ruta-8" className="text">Texto 8</a>
         </div>
-
       </header>
     </div>
   );

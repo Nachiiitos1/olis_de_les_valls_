@@ -1,0 +1,132 @@
+/* Estilos para el primer header */
+.header-tienda {
+  background-color: #4B2E45;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out;
+}
+
+.header-tienda.slide-down-tienda {
+  transform: translateY(0);
+}
+
+.header-tienda.slide-up-tienda {
+  transform: translateY(-100%);
+}
+
+.centered-text-container-tienda {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Asegura que los textos estén centrados horizontalmente */
+}
+
+.centered-text-tienda {
+  text-align: center;
+  opacity: 0;
+}
+
+.centered-text-tienda.fade-in-tienda {
+  animation: fadeIn-tienda 1s forwards;
+}
+
+.centered-text-tienda.fade-out-tienda {
+  animation: fadeOut-tienda 1s forwards;
+}
+
+.centered-text-tienda h1 {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn-tienda {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut-tienda {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Estilos para el segundo header */
+.second-header-tienda {
+  background-color: white; /* Fondo blanco */
+  width: 100%;
+
+  
+  position: fixed;
+  top: 50px; /* Ajusta según sea necesario */
+  z-index: 9997; /* Asegura que esté sobre cualquier otro elemento */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: top 0.5s ease-in-out; /* Transición suave */
+}
+
+.second-header-tienda.sticky {
+  top: 0; /* Coloca el encabezado en la parte superior cuando el primero desaparezca */
+}
+
+.text-container-tienda {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.text-tienda {
+  background-color: transparent;
+  color: #4b2e45;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.text-tienda:hover {
+  color: #c6d420; /* Cambia el color a verde cuando el cursor está encima */
+}
+
+.image-container-tienda {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Ajusta el margen derecho del contenedor de la imagen */
+}
+
+.image-tienda {
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: 100px; /* Ajusta la altura de la imagen */
+}
+
+.cart-icon {
+  cursor: pointer;
+  margin-left: 30%;
+  width: 30px;
+  height: 30px;
+}
+.green-box {
+  background-color: #c6d420; /* Color de fondo verde */
+  padding: 5px 10px; /* Ajusta el relleno según sea necesario */
+}
+
+.green-box .text-tienda {
+  color: white; /* Color de texto blanco */
+}
+.green-box:hover {
+  background-color: #4b2e45; /* Color de fondo verde */
+}

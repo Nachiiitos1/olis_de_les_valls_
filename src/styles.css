@@ -215,3 +215,247 @@ body {
     justify-content: center;
   }
   
+/*PRODUCTOS*//* PRODUCTOS */
+.content-container-product {
+  margin-top: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.image-text-container-product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.text-above-image-product {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.large-image-product {
+  width: 600px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
+
+.center-text-container-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.title-text-product {
+  font-size: 40px;
+  color: #4b2e45;
+  font-weight: 1000;
+  margin-bottom: 10px;
+}
+
+.explanatory-text-product {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.explanatory-text-product2 {
+  font-size: 10px;
+  margin-bottom: 20px;
+  color:  #333333;
+}
+
+.button-container-product {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+button.selected-product {
+  background-color: #800080; /* Fondo morado para el botón seleccionado */
+  color: white; /* Texto blanco para el botón seleccionado */
+}
+
+.styled-button-product {
+  text-align: center;
+  line-height: 10px;
+  width: auto;
+  height: auto;
+  font-weight: 900;
+  background: #51294122; /* Fondo blanco por defecto */
+  color: black; /* Texto negro por defecto */
+  padding: 10px 20px;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.dynamic-text-product {
+  color: #879b26;
+  font-family: "Poppins", Sans-serif;
+  font-size: 2.8em;
+  font-weight: 900;
+  margin-top: 20px;
+}
+.addtocartButton{
+  width: 200px;
+  font-family: "Poppins", Sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px;
+  padding: 0px 35px;
+  color: #FFFFFF;
+  background-color: #c6d420;
+  transition: all 0.2s;
+}
+.addtocartButton:hover{
+  cursor: pointer;
+}
+/* Estilos para el carrito */
+/* Estilos para el carrito */
+.cart-panel {
+  position: fixed;
+  z-index: 10000; /* Asegura que esté por encima del second-header */
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 140px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff; /* Color de fondo del botón */
+  border: 1px solid #cccccc; /* Borde del botón */
+  border-radius: 50%; /* Hace que el botón sea redondeado */
+  display: flex; /* Permite centrar el contenido verticalmente */
+  justify-content: left; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+}
+
+
+.cart-button:hover {
+  background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
+  border-color: #999999; /* Cambia el color del borde al pasar el cursor */
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-cart-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.cart-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cart-item-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-selector-container {
+  width: 100%;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-selector button {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+
+.quantity-selector-container {
+  width: 100%;
+}
+
+.quantity-selector-cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-selector-cart button {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.quantity-selector-cart input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+
+

@@ -1,24 +1,81 @@
-import React, { useState } from 'react';
-import Header from './header'
-//import videoSource from './Assets/Images/VideoOlivos.mp4'; 
-import videoSource from './Assets/Images/VideoOlivos2.mp4'; 
+// Home.js
+import React, { useState, useEffect } from 'react';
+import Header from './header';
+import videoSource from './Assets/Images/VideoOlivos2.mp4';
 import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
-import receta1 from './Assets/Images/receta1.jpg'
-import imagenvideo from './Assets/Images/iconosVideo.png'
+import image2 from './Assets/Images/aceite2.png';
+import receta1 from './Assets/Images/receta1.jpg';
+import imagenvideo from './Assets/Images/iconosVideo.png';
 import BotonDeslizante from './components/botondeslizante';
 import Footer from './components/footer';
 import './styles.css';
+import { CartButton, Cart } from './components/cart';
+import { db } from './firebase';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid'; // Import UUID generation library
 
 function Home() {
-  const [hoveredButtonIndex, setHoveredButtonIndex] = useState(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cart, setCart] = useState([]);
+  const [uuid, setUuid] = useState(null);
 
-  const handleMouseEnter = (index) => {
-    setHoveredButtonIndex(index);
+  useEffect(() => {
+    const storedUuid = localStorage.getItem('uuid');
+    if (!storedUuid) {
+      const newUuid = uuidv4();
+      localStorage.setItem('uuid', newUuid);
+      setUuid(newUuid);
+    } else {
+      setUuid(storedUuid);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (uuid) {
+      const fetchCart = async () => {
+        try {
+          const docRef = doc(db, 'carts', uuid);
+          const docSnap = await getDoc(docRef);
+
+          if (docSnap.exists()) {
+            setCart(docSnap.data().items);
+          }
+        } catch (error) {
+          console.error("Error fetching cart: ", error);
+        }
+      };
+
+      fetchCart();
+    }
+  }, [uuid]);
+
+  useEffect(() => {
+    if (uuid && cart.length > 0) {
+      const saveCart = async () => {
+        try {
+          const docRef = doc(db, 'carts', uuid);
+          await setDoc(docRef, { items: cart });
+        } catch (error) {
+          console.error("Error saving cart: ", error);
+        }
+      };
+
+      saveCart();
+    }
+  }, [cart, uuid]);
+
+  const openCart = () => {
+    setIsCartOpen(true);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredButtonIndex(null);
+  const closeCart = () => {
+    setIsCartOpen(false);
+  };
+
+  const handleButtonClick = (path) => {
+    window.location.href = path;
   };
 
   return (
@@ -42,22 +99,9 @@ function Home() {
 
       <div className="productContainer">
         <div className="productItem">
+          <Link to="/product1">
           <img src={image1} alt="Producto 1" className="productImage" />
-          <div>
-            <p className="productTextStyle1">Aceite</p>
-            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-            <p className="productPriceStyle">32€</p>
-          </div>
-          <button
-            className="buttonStyle"
-            onMouseEnter={() => handleMouseEnter(0)}
-            onMouseLeave={handleMouseLeave}
-          >
-            SELECCIONAR OPCIONES
-          </button>
-        </div>
-        <div className="productItem">
-          <img src={image1} alt="Producto 1" className="productImage" />
+          </Link>
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
@@ -65,30 +109,27 @@ function Home() {
           </div>
           <button
             className="buttonStyle"
-            onMouseEnter={() => handleMouseEnter(1)}
-            onMouseLeave={handleMouseLeave}
+            onClick={() => handleButtonClick('/product1')}
           >
             SELECCIONAR OPCIONES
           </button>
         </div>
         <div className="productItem">
-          <img src={image1} alt="Producto 1" className="productImage" />
+          <img src={image2} alt="Producto 2" className="productImage" />
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-            <p className="productPriceStyle">10€</p>
+            <p className="productPriceStyle">30€</p>
           </div>
           <button
             className="buttonStyle"
-            onMouseEnter={() => handleMouseEnter(2)}
-            onMouseLeave={handleMouseLeave}
+            onClick={() => handleButtonClick('/product2')}
           >
             SELECCIONAR OPCIONES
           </button>
         </div>
       </div>
 
-      {/* Botón "Ver más" */}
       <div className="buttonContainer">
         <a href="/tienda" className="verMasButton">Ver más</a>
       </div>
@@ -122,12 +163,20 @@ function Home() {
           </div>
         </div>
       </div>
-      <BotonDeslizante/>
+
+      {isCartOpen && (
+        <Cart
+          cart={cart}
+          closeCart={closeCart}
+          increaseQuantity={() => {}}
+          decreaseQuantity={() => {}}
+          removeItem={() => {}}
+        />
+      )}
+      <CartButton openCart={openCart} />
+      <BotonDeslizante />
       <WhatsappButton />
-      <div>
-        <br></br>
-      </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -91,4 +91,15 @@
     width: 100px; /* Ajusta el ancho de la imagen */
     height: 100px; /* Ajusta la altura de la imagen */
   }
+  .green-box {
+    background-color: #c6d420; /* Color de fondo verde */
+    padding: 30px 10px; /* Ajusta el relleno según sea necesario */
+  }
   
+  .green-box .text {
+    color: white; /* Color de texto blanco */
+  }
+  .green-box:hover {
+    background-color: #4b2e45; /* Color de fondo verde */
+ 
+  }
