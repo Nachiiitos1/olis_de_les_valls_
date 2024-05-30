@@ -1,7 +1,7 @@
-// Home.js
-import React, { useState, useEffect } from 'react';
-import Header from './header';
-import videoSource from './Assets/Images/VideoOlivos2.mp4';
+import React, { useState } from 'react';
+import Header from './header'
+//import videoSource from './Assets/Images/VideoOlivos.mp4'; 
+import videoSource from './Assets/Images/VideoOlivos.mp4'; 
 import WhatsappButton from './components/whatsapp';
 import image1 from './Assets/Images/aceite.png';
 import image2 from './Assets/Images/aceite2.png';
@@ -10,11 +10,7 @@ import imagenvideo from './Assets/Images/iconosVideo.png';
 import BotonDeslizante from './components/botondeslizante';
 import Footer from './components/footer';
 import './styles.css';
-import { CartButton, Cart } from './components/cart';
-import { db } from './firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid'; // Import UUID generation library
+import logo from './Assets/Images/logofondo.png';
 
 function Home() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -86,6 +82,19 @@ function Home() {
           <source src={videoSource} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className="second-header">
+        <div className="text-container">
+          <a href="/tienda" className="text">Tienda</a>
+          <a href="/ruta-1" className="text">Nuestros aceites</a>
+          <a href="/ruta-2" className="text">Historia</a>
+          <a href="/" className="image-container"> {/* Reemplaza '/' con la ruta correcta */}
+            <img src={logo} alt="Imagen" className="image" />
+          </a>
+          <a href="/ruta-5" className="text">Recetas</a>
+          <a href="/ruta-6" className="text">Noticias</a>
+          <a href="/ruta-7" className="text">Contacto</a>
+        </div>
+      </div>
         <div className="textOverlay">
           <h1 className="textStyle1 fade-in">olis mas</h1>
           <h1 className="textStyle2 fade-in">de les valls</h1>
