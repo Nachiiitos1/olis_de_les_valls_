@@ -3,22 +3,64 @@
   background-color: #4B2E45;
   width: 100%;
   height: 50px;
-  position: absolute; /* Cambia a 'absolute' para que pueda moverse */
+  position: fixed;
   top: 0;
   left: 0;
-  transition: top 0.3s; /* Agrega transición suave en la propiedad 'top' */
   z-index: 1000;
+  transition: transform 0.5s ease-in-out;
+}
+
+.header-tienda.slide-down {
+  transform: translateY(0);
+}
+
+.header-tienda.slide-up {
+  transform: translateY(-100%);
 }
 
 .centered-text-container {
-  width: 100%;
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Asegura que los textos estén centrados horizontalmente */
 }
 
 .centered-text {
+  text-align: center;
+  opacity: 0;
+}
+
+.centered-text.fade-in {
+  animation: fadeIn-tienda 1s forwards;
+}
+
+.centered-text.fade-out {
+  animation: fadeOut-tienda 1s forwards;
+}
+
+.centered-text h1 {
   color: white;
   font-size: 12px;
   font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Estilos para el segundo header */
