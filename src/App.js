@@ -7,6 +7,8 @@ import Noticies from './Noticies';
 import FotoLicor from './FotorLicor';
 import Tractor from './Tractor';
 import Recetas from './Recetas';
+import Producto1 from './product1'
+import Producto2 from './product2'
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           <Route path='/Noticies' element={<Noticies />} />
           <Route path='/FotoLicor' element={<FotoLicor />} />
           <Route path='/Tractor' element={<Tractor />} />
+          <Route path='/Tractor' element={<Tractor />} />
+          <Route path='/product1' element={<Producto1 />} />
+          <Route path='/product2' element={<Producto2 />} />
 
         </Routes>
       </div>
