@@ -28,6 +28,19 @@ function Header({ toggleCart }) {
             <h1>{texts[currentIndex]}</h1>
           </div>
         </div>
+        <div className="second-header">
+          <div className="text-container">
+            <Link to="/tienda" className="text">Tienda</Link>
+            <Link to="/ruta-1" className="text">Nuestros aceites</Link>
+            <Link to="/ruta-2" className="text">Historia</Link>
+            <Link to="/" className="image-container">
+              <img src={logo} alt="Imagen" className="image" />
+            </Link>
+            <Link to="/ruta-5" className="text">Recetas</Link>
+            <Link to="/Noticies" className="text">Notícies</Link>
+            <Link to="/Contacte" className="text">Contacto</Link>
+          </div>
+        </div>
       </header>
       <div className="content">
         {/* Espacio para el contenido de la página debajo del primer header */}

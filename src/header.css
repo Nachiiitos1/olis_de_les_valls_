@@ -1,4 +1,3 @@
-/* Estilos para el primer header */
 .header {
   background-color: #4B2E45;
   width: 100%;
@@ -23,7 +22,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%; /* Asegura que los textos estén centrados horizontalmente */
+  width: 100%; 
 }
 
 .centered-text {
@@ -62,13 +61,10 @@
     opacity: 0;
   }
 }
-
-/* Estilos para el segundo header */
 .second-header {
   background-color: transparent;
   width: 100%;
   margin-top: 50px;
-  margin-bottom: -5%;
   padding-top: 10px;
   position: relative;
   z-index: 999;
@@ -76,8 +72,9 @@
 
 .text-container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center;
+  gap: 10px; /* Espacio entre los elementos */
 }
 
 .text {
@@ -85,9 +82,9 @@
   color: #4B2E45;
   font-size: 18px;
   font-weight: 900;
-  margin: 0 10px;
   cursor: pointer;
   text-decoration: none;
+  margin: 0 10px;
 }
 
 .text:hover {
@@ -96,8 +93,8 @@
 
 .image-container {
   display: flex;
+  justify-content: center; /* Asegura que la imagen esté centrada */
   align-items: center;
-  margin-right: 10px;
 }
 
 .image {

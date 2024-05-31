@@ -13,7 +13,7 @@ const FotoLicor = () => {
   return (
     <div>
       <Header />
-      <div className="image-container">
+      <div className="image-containerL">
         <img src={Fotolicor} alt="Licor" className="licor-image" />
         <div className="text-overlay">
           La Cooperativa Arbequina estrena el seu propi licor d’oliva arbequina
