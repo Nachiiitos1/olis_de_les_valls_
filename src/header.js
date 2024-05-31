@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './header.css';
 import logo from './Assets/Images/logofondo.png';
 import { Link } from 'react-router-dom';
+import './Noticies';
 
 function Header({ toggleCart }) {
   const [texts, setTexts] = useState(["ENVIAMENT GRATUÏT ", "ATENCIÓ AL CLIENT: 654091283 "]);
