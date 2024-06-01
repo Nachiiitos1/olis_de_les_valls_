@@ -20,7 +20,7 @@ const FotoLicor = () => {
           La Cooperativa Arbequina estrena el seu propi licor d’oliva arbequina
         </div>
         <div className="center-box">
-          29 ABR. 20024
+          29 ABR. 2024
         </div>
       </div>
 
