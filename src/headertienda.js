@@ -49,23 +49,19 @@ function HeaderTienda() {
         </div>
       </header>
       <header className={`second-header-tienda ${stickyHeader2 ? 'sticky' : ''}`}>
-        <div className="text-container-tienda">
-          <div className='green-box'>
-          <a href="/ruta-1" className="text-tienda">Texto 1</a>
-          </div>
-          <a href="/product2" className="text-tienda">Texto 2</a>
-          <a href="/tienda" className="text-tienda">Tienda</a>
-          <a href="/ruta-4" className="text-tienda">Texto 4</a>
-          <Link to="/">
-            <div className="image-container-tienda">
-              <img src={logo} alt="Imagen" className="image-tienda" />
+      <div className="text-container-tienda">
+            <div className='green-box'>
+            <Link to="/tienda" className="text">Tienda</Link>
             </div>
-          </Link>
-          <a href="/ruta-5" className="text-tienda">Texto 5</a>
-          <a href="/ruta-6" className="text-tienda">Texto 6</a>
-          <a href="/ruta-7" className="text-tienda">Texto 7</a>
-          <a href="/ruta-8" className="text-tienda">Texto 8</a>
-        </div>
+            <Link to="/NuestrosAceites" className="text">Nuestros aceites</Link>
+            <Link to="/Historia" className="text">Historia</Link>
+            <Link to="/" className="image-container">
+              <img src={logo} alt="Imagen" className="image" />
+            </Link>
+            <Link to="/Recetas" className="text">Recetas</Link>
+            <Link to="/Noticies" className="text">Notícies</Link>
+            <Link to="/Contacte" className="text">Contacto</Link>
+          </div>
       </header>
     </div>
   );

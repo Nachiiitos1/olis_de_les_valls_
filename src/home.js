@@ -32,7 +32,7 @@ function Home() {
       setUuid(storedUuid);
     }
   }, []);
-
+  
   useEffect(() => {
     if (uuid) {
       const fetchCart = async () => {
@@ -117,7 +117,9 @@ function Home() {
           </button>
         </div>
         <div className="productItem">
+          <Link to="/product2">
           <img src={image2} alt="Producto 2" className="productImage" />
+          </Link>
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>

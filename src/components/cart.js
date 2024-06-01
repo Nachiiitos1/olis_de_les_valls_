@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles.css';
 import cartIcon from '../Assets/Images/carticon.png';
 
 function Cart({ cart, closeCart, increaseQuantity, decreaseQuantity, removeItem }) {
   const totalPrice = cart.reduce((total, item) => total + item.precio * item.cantidad, 0);
+  const navigate = useNavigate();
 
   return (
     <div className="cart-panel">
@@ -28,12 +30,19 @@ function Cart({ cart, closeCart, increaseQuantity, decreaseQuantity, removeItem 
                     <button onClick={() => increaseQuantity(index)}>+</button>
                   </div>
                 </div>
+                <button onClick={() => removeItem(index)}>Eliminar</button>
               </div>
             </li>
           ))}
         </ul>
       )}
       <h3>Total: {totalPrice}€</h3>
+      <button 
+        className="finalize-purchase-button" 
+        onClick={() => navigate('/finalizarcompra')}
+      >
+        Finalizar compra
+      </button>
     </div>
   );
 }

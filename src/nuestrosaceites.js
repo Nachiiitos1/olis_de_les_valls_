@@ -1,12 +1,14 @@
 import React from 'react';
 import './nuestrosaceites.css';
-import origenImage from './fotos/LOGO FONDO TRANSPARENTE.png'; 
-import perfilImage from './fotos/fotor-ai-20240314164156.jpg';
-import perfilImage1 from './fotos/fotor-ai-20240314163840.jpg'; 
+import origenImage from './Assets/Images/LOGO FONDO TRANSPARENTE.png'; 
+import perfilImage from './Assets/Images/fotor-ai-20240314164156.jpg';
+import perfilImage1 from './Assets/Images/fotor-ai-20240314163840.jpg'; 
+import Header from './header';
 
 function nuestrosaceites() {
   return (
     <div className="nuestrosaceites">
+      <Header/>
       <div className="top-image-container">
         <img src={perfilImage1} alt="Imagen de arriba" className="top-image" />
         <h1 className="title">Nuestros aceites</h1>

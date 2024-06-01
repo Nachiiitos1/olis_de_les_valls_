@@ -9,6 +9,11 @@ import { Cart, CartButton } from './components/cart';
 import QuantitySelector from './components/quantityselector';
 import './styles.css';
 import { v4 as uuidv4 } from 'uuid'; // Import UUID generation library
+import { Link } from 'react-router-dom';
+import image2 from "./Assets/Images/aceite2.png"
+import image3 from "./Assets/Images/aceite3.png"
+import image5 from "./Assets/Images/aceite5.png"
+import image4 from "./Assets/Images/aceite4.jpg"
 
 function Product1() {
   const [selectedButton, setSelectedButton] = useState(1);
@@ -67,6 +72,10 @@ function Product1() {
     fetchProductData();
   }, []);
 
+  const handleButtonClick = (path) => {
+    window.location.href = path;
+  };
+
   useEffect(() => {
     if (uuid && cart.length > 0) {
       const saveCart = async () => {
@@ -81,10 +90,6 @@ function Product1() {
       saveCart();
     }
   }, [cart, uuid]);
-
-  const handleButtonClick = (buttonIndex) => {
-    setSelectedButton(buttonIndex);
-  };
 
   const addToCart = async () => {
     if (productData) {
@@ -115,6 +120,9 @@ function Product1() {
       }
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+  }, []);
 
   const openCart = () => {
     setIsCartOpen(true);
@@ -175,7 +183,6 @@ function Product1() {
         {productData ? (
           <>
             <div className="image-text-container-product">
-              <div className="text-above-image-product">Texto Arriba de la Imagen</div>
               <img src={productData.imagenURL} alt="Producto 1" className="large-image-product" />
             </div>
 
@@ -186,13 +193,13 @@ function Product1() {
               <div className="button-container-product">
                 <button
                   className={`styled-button-product ${selectedButton === 1 ? 'selected-product' : ''}`}
-                  onClick={() => handleButtonClick(1)}
+                  onClick={() => setSelectedButton(1)}
                 >
                   1ud
                 </button>
                 <button
                   className={`styled-button-product ${selectedButton === 2 ? 'selected-product' : ''}`}
-                  onClick={() => handleButtonClick(2)}
+                  onClick={() => setSelectedButton(2)}
                 >
                   3uds
                 </button>
@@ -219,6 +226,101 @@ function Product1() {
         ) : (
           <p>Cargando...</p>
         )}
+      </div>
+      <div className="custom-container">
+        <p className="custom-text">
+          Perfil de frutado maduro medio leve. En boca es dulce, con punta de picante suave, un amargo suave y astringencia leve en boca. Aromas secundarios de tipo vegetal, con connotaciones claras de hinojo o tomate, así como toques de almendra, o plátano maduro, que le definen la dulzura agradable en boca. El conjunto resulta un aceite maduro y dulce, suave en boca y nariz.
+          <br />
+          <br />
+          MARIDAJE: Es un aceite ideal tanto para utilizar en la cocina, como para consumir en crudo en un buen pan con tomate, por su sabor dulce y suave. Indicado para aquel consumidor que busca un aceite fino y dulce.
+          <br />
+          <br />
+          VALOR NUTRICIONAL POR 100 g. *POR PORCIÓN DE 14 g.
+          <br />
+          VALOR ENERGETICO: 900 Kcal / 3.700 Kj 126 Kcal – 518 Kj
+          <br />
+          PROTEINAS: 0 g. 0 g.
+          <br />
+          HIDRATOS DE CARBONO: 0 g. 0 g.
+          <br />
+          GRASAS: 100 g. de las cuales: 14 g. de las cuales:
+          <br />
+          Saturadas: 13 g. 2 g.
+          <br />
+          Monoinsaturadas: 79 g. 11 g.
+          <br />
+          Poliinsaturadas: 8 g. 1 g.
+          <br />
+          Vitamina E: 20 mg. (200% CDR) 3 mg. (30% CDR)
+        </p>
+      </div>
+      <div className="subtitleStyle1">Los más vendidos</div>
+
+      <div className="productContainer">
+        <div className="productItem">
+          <Link to="/product2">
+            <img src={image2} alt="Producto 2" className="productImage" />
+          </Link>
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+          
+          </div>
+          <button
+            className="buttonStyle"
+            onClick={() => handleButtonClick('/product2')} 
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+        <div className="productItem">
+          <Link to="/product3">
+          <img src={image3} alt="Producto 3" className="productImage" />
+          </Link>
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+          
+          </div>
+          <button
+            className="buttonStyle"
+            onClick={() => handleButtonClick('/product3')}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+        <div className="productItem">
+          <Link to="/product4">
+          <img src={image4} alt="Producto 4" className="productImage" />
+          </Link>
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+           
+          </div>
+          <button
+            className="buttonStyle"
+            onClick={() => handleButtonClick('/product4')}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
+        <div className="productItem">
+          <Link to="/product5">
+          <img src={image5} alt="Producto 5" className="productImage" />
+          </Link>
+          <div>
+            <p className="productTextStyle1">Aceite</p>
+            <p className="productTextStyle2">Aceite de oliva virgen extra</p>
+           
+          </div>
+          <button
+            className="buttonStyle"
+            onClick={() => handleButtonClick('/product5')}
+          >
+            SELECCIONAR OPCIONES
+          </button>
+        </div>
       </div>
 
       {isCartOpen && (

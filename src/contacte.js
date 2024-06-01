@@ -5,6 +5,7 @@ import Header from './header';
 import imagen from './Assets/Images/icono_verde.png'; // O la extensión correspondiente si es diferente
 import './contacte.css'; // Importa el archivo CSS
 import MapComponent from './MapComponent';
+import Footer from './components/footer'
 
 function contacte() {
   return (
@@ -261,6 +262,7 @@ function contacte() {
         </div>
       </div>
     </section>
+    <Footer/>
   </div> 
  
 </div>

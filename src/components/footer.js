@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './footer.css';
+import "./footer.css"
+import Footerimage from '../Assets/Images/footerimage.png';
 
 function Footer() {
   return (
     <footer>
+      <img src={Footerimage}></img>
       <div className="footer-content">
+
         <div className="footer-section about">
           <h2 style={{ color: 'white' }}>Links</h2>
           <ul>

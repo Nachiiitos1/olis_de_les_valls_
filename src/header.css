@@ -101,3 +101,15 @@
   width: 100px;
   height: 100px;
 }
+.green-box {
+  background-color: #c6d420 !important; /* Color de fondo verde */
+  padding: 5px 10px; /* Ajusta el relleno según sea necesario */
+}
+
+.green-box .text {
+  color: white !important; /* Color de texto blanco */
+}
+.green-box:hover {
+  background-color: #4b2e45 !important;
+  color: white; /* Color de fondo verde */
+}

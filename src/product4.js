@@ -14,9 +14,10 @@ import image1 from "./Assets/Images/aceite.png"
 import image2 from "./Assets/Images/aceite2.png"
 import image3 from "./Assets/Images/aceite3.png"
 import image5 from "./Assets/Images/aceite5.png"
+import image6 from "./Assets/Images/aceite6.png"
 import image4 from "./Assets/Images/aceite4.jpg"
 
-function Product2() {
+function Product4() {
   const [selectedButton, setSelectedButton] = useState(1);
   const [productData, setProductData] = useState(null);
   const [cart, setCart] = useState([]);
@@ -60,7 +61,7 @@ function Product2() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const docRef = doc(db, 'productos', 'xngq1Of8N33zh8I9h1hf');
+        const docRef = doc(db, 'productos', 'fGidEcDOwbX8EBGppOSL');
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
@@ -265,7 +266,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-  
+
           </div>
           <button
             className="buttonStyle"
@@ -281,7 +282,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-       
+
           </div>
           <button
             className="buttonStyle"
@@ -291,17 +292,17 @@ function Product2() {
           </button>
         </div>
         <div className="productItem">
-          <Link to="/product4">
-          <img src={image4} alt="Producto 4" className="productImage" />
+          <Link to="/product6">
+          <img src={image6} alt="Producto 6" className="productImage" />
           </Link>
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+ 
           </div>
           <button
             className="buttonStyle"
-            onClick={() => handleButtonClick('/product4')}
+            onClick={() => handleButtonClick('/product6')}
           >
             SELECCIONAR OPCIONES
           </button>
@@ -313,7 +314,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+
           </div>
           <button
             className="buttonStyle"
@@ -344,4 +345,4 @@ function Product2() {
   );
 }
 
-export default Product2;
+export default Product4;

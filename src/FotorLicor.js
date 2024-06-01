@@ -8,6 +8,7 @@ import PokeBowl from "./Assets/Images/Poke_bowl.jpg";
 import Torrades_de_primeravera from "./Assets/Images/Torrades_de_primeravera.jpg";
 import Amanida from "./Assets/Images/amanida_tropical.jpg";
 import "./FotoLicor.css";
+import Footer from './components/footer'
 
 const FotoLicor = () => {
   return (
@@ -87,6 +88,7 @@ const FotoLicor = () => {
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
   );
 };

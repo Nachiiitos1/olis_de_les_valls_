@@ -16,7 +16,7 @@ import image3 from "./Assets/Images/aceite3.png"
 import image5 from "./Assets/Images/aceite5.png"
 import image4 from "./Assets/Images/aceite4.jpg"
 
-function Product2() {
+function Product5() {
   const [selectedButton, setSelectedButton] = useState(1);
   const [productData, setProductData] = useState(null);
   const [cart, setCart] = useState([]);
@@ -34,6 +34,7 @@ function Product2() {
       setUuid(storedUuid);
     }
   }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
   }, []);
@@ -60,7 +61,7 @@ function Product2() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const docRef = doc(db, 'productos', 'xngq1Of8N33zh8I9h1hf');
+        const docRef = doc(db, 'productos', 'BwtJNpFofjuvzAul62h5');
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
@@ -265,7 +266,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-  
+
           </div>
           <button
             className="buttonStyle"
@@ -281,7 +282,6 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-       
           </div>
           <button
             className="buttonStyle"
@@ -297,7 +297,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+
           </div>
           <button
             className="buttonStyle"
@@ -307,17 +307,17 @@ function Product2() {
           </button>
         </div>
         <div className="productItem">
-          <Link to="/product5">
-          <img src={image5} alt="Producto 5" className="productImage" />
+          <Link to="/product2">
+          <img src={image2} alt="Producto 2" className="productImage" />
           </Link>
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+
           </div>
           <button
             className="buttonStyle"
-            onClick={() => handleButtonClick('/product5')}
+            onClick={() => handleButtonClick('/product2')}
           >
             SELECCIONAR OPCIONES
           </button>
@@ -344,4 +344,4 @@ function Product2() {
   );
 }
 
-export default Product2;
+export default Product5;

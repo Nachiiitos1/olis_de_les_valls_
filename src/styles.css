@@ -52,10 +52,15 @@ body {
     display: flex;
     justify-content: center;
   }
+  .productItem:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
   
   .productItem {
     text-align: center;
     margin: 0 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .productImage {
@@ -289,7 +294,20 @@ button.selected-product {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.custom-container {
+  margin-top: 200px;
+  width: 100%;
+  background-color: #C6D42010 ;
+}
 
+.custom-text {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
 
 .dynamic-text-product {
   color: #879b26;
@@ -456,6 +474,127 @@ button.selected-product {
   text-align: center;
   border: 1px solid #ccc;
 }
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 180px;
+}
 
+.basket-section, .order-summary, .checkout-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
 
+.basket-section ul {
+  list-style: none;
+  padding: 0;
+}
 
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.quantity-selector-container {
+  margin-top: 10px;
+}
+
+.quantity-selector-cart {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-selector-cart button {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-selector-cart button:hover {
+  background-color: #0056b3;
+}
+
+.quantity-selector-cart input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-form button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-form button:hover {
+  background-color: #218838;
+}
+
+/* Añadir este bloque de estilos a tu archivo CSS existente */
+
+.finalize-purchase-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.finalize-purchase-button:hover {
+  background-color: #45a049;
+}

@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css'; // Ajusta la ruta según la estructura de tu proyecto
-import oli from './fotos/oli.jpg';
-import oligirasol from './fotos/oli girasol.jpg';
-import oliOliva from './fotos/olioliva.jpg';
-import oliVerge from './fotos/oliverge.jpg';
+import oli from './Assets/Images/oli.jpg';
+import oligirasol from './Assets/Images/oli girasol.jpg';
+import oliOliva from './Assets/Images/olioliva.jpg';
+import oliVerge from './Assets/Images/oliverge.jpg';
+import Header from './header';
 
 function Productes() {
     return (
         <div>
+            <Header/>
             <h2>Productes</h2>
             <div style={{ width: '100%', overflow: 'hidden' }}>
                 <img

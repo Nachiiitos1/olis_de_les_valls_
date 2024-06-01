@@ -16,7 +16,7 @@ import image3 from "./Assets/Images/aceite3.png"
 import image5 from "./Assets/Images/aceite5.png"
 import image4 from "./Assets/Images/aceite4.jpg"
 
-function Product2() {
+function Product3() {
   const [selectedButton, setSelectedButton] = useState(1);
   const [productData, setProductData] = useState(null);
   const [cart, setCart] = useState([]);
@@ -34,6 +34,7 @@ function Product2() {
       setUuid(storedUuid);
     }
   }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
   }, []);
@@ -60,7 +61,7 @@ function Product2() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const docRef = doc(db, 'productos', 'xngq1Of8N33zh8I9h1hf');
+        const docRef = doc(db, 'productos', 'zMQ5DEVrUqXms9RiajVG');
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
@@ -265,7 +266,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-  
+    
           </div>
           <button
             className="buttonStyle"
@@ -281,7 +282,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-       
+   
           </div>
           <button
             className="buttonStyle"
@@ -297,7 +298,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+      
           </div>
           <button
             className="buttonStyle"
@@ -313,7 +314,7 @@ function Product2() {
           <div>
             <p className="productTextStyle1">Aceite</p>
             <p className="productTextStyle2">Aceite de oliva virgen extra</p>
-     
+
           </div>
           <button
             className="buttonStyle"
@@ -344,4 +345,4 @@ function Product2() {
   );
 }
 
-export default Product2;
+export default Product3;

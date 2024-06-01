@@ -11,41 +11,13 @@
   }
   
   /* Aplicación de fuentes */
-  body, h1, h2, h3, h4, p {
-    font-family: var(--e-global-typography-text-font-family);
-  }
-  
-  h1 {
-    font-weight: var(--e-global-typography-primary-font-weight);
-  }
-  
-  h2 {
-    font-weight: var(--e-global-typography-secondary-font-weight);
-  }
-  
-  h3 {
-    font-weight: var(--e-global-typography-accent-font-weight);
-  }
-  
-  h4 {
-    font-weight: var(--e-global-typography-secondary-font-weight);
-  }
-  
-  p {
-    font-weight: var(--e-global-typography-text-font-weight);
-  }
   
   /* Estilos existentes */
-  .App {
-    text-align: left; /* Alinear el texto a la izquierda */
-    padding: 20px; /* Añadir espacio alrededor del contenido */
+  .AppA{
+    margin-top: 200px;
   }
   
-  .header {
-    background-color: #4b2e45;
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-  }
+ 
   
   .principles {
     text-align: left;
@@ -59,12 +31,12 @@
   }
   
   @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
+    .AppA-logo {
       animation: App-logo-spin infinite 20s linear;
     }
   }
   
-  .App-link {
+  .AppA-link {
     color: #61dafb;
   }
   
@@ -177,3 +149,9 @@
     margin-right: 20px;
   }
   
+
+  .header {
+    background-color: #4b2e45;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }

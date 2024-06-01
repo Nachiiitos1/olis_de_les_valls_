@@ -1,12 +1,15 @@
 import React from 'react';
 import './historiaaceites.css';
-import exampleImage from './fotos/campo.jpg';
-import imagen2 from './fotos/campo2.jpg';
-import actu from './fotos/actua.jpg';
+import exampleImage from './Assets/Images/campo.jpg';
+import imagen2 from './Assets/Images/campo2.jpg';
+import actu from './Assets/Images/actua.jpg';
+import Header from './header';
 
 function historiaaceites() {
   return (
-    <div className="App">
+    
+    <div className="AppA">
+      <Header/>
       <div className="header">
         <h1 className="title">Historia</h1>
       </div>

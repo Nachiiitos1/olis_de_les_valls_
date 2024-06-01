@@ -16,6 +16,7 @@ import Burritos from './Assets/Images/Burrito.jpg';
 import Trufa from './Assets/Images/Trufa.jpg';
 import Arroz from './Assets/Images/Arroz_y_pluma.jpg';
 import Moniato from './Assets/Images/Moniato.jpg';
+import Footer from './components/footer'
 
 function Recetas() {  // Asegúrate de que el nombre del componente sea Recetas
     const photos = [
@@ -103,6 +104,7 @@ function Recetas() {  // Asegúrate de que el nombre del componente sea Recetas
                     </div>
                 ))}
             </div>
+            <Footer/>
         </>
     );
 }

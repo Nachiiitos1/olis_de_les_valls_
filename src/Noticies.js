@@ -15,6 +15,7 @@ import Microfono from './Assets/Images/microfono.jpg';
 import TractorImage from './Assets/Images/tractor_ametlles-768x460.jpg';  // Importa la imagen con un alias
 import Imagen_3 from './Assets/Images/imagen_3.png';
 import Aceite_virgen from './Assets/Images/oli_aceite_virgen.jpg';
+import Footer from './components/footer'
 
 function Noticies() {
     const photos = [
@@ -117,6 +118,7 @@ function Noticies() {
                     </div>
                 ))}
             </div>
+            <Footer/>
         </>
     );
 }
