@@ -20,7 +20,7 @@
 .centered-text-container {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 52.5%;
   transform: translate(-50%, -50%);
   width: 100%; 
 }
@@ -32,6 +32,7 @@
 
 .centered-text.fade-in {
   animation: fadeIn-tienda 1s forwards;
+  
 }
 
 .centered-text.fade-out {

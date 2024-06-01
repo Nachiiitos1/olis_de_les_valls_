@@ -102,7 +102,7 @@ function Noticies() {
         <>
             <Header />
          
-            <div className="photo-grid">
+            <div className="photo-gridn">
                 {photos.map((photo, index) => (
                     <div key={index} className="photo-item">
                         {photo.link ? (

@@ -1,9 +1,9 @@
-    .photo-grid {
+    .photo-gridn {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 32px; /* Incrementa el espacio entre las fotos */
         padding: 16px;
-        margin-top: 100px; /* Agrega margen superior para bajar las fotos */
+        margin-top: 180px; /* Agrega margen superior para bajar las fotos */    
     }
 
     .photo-item {
