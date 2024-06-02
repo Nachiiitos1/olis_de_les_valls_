@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Header from "./header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin, faPinterest, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -11,6 +11,9 @@ import "./FotoLicor.css";
 import Footer from './components/footer'
 
 const FotoLicor = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+  }, []);
   return (
     <div>
       <Header />

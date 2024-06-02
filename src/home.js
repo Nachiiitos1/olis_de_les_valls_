@@ -17,10 +17,15 @@ import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import logo from "./Assets/Images/logofondo.png"
 
+
 function Home() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState([]);
   const [uuid, setUuid] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+  }, []);
 
   useEffect(() => {
     const storedUuid = localStorage.getItem('uuid');
@@ -142,7 +147,9 @@ function Home() {
         <div className="subtitleStyle2">Noticias y Recetas</div>
         <div className="newsItemsContainer">
           <div className="newsItem">
+            <Link to="/Noticies">
             <img src={receta1} alt="Noticia 1" className="newsImage" />
+            </Link>
             <div>
               <p className="newsTextStyle1">Título de la noticia 1</p>
               <p className="newsTextStyle2">Descripción de la noticia 1</p>
@@ -150,7 +157,9 @@ function Home() {
             </div>
           </div>
           <div className="newsItem">
+            <Link to="/Noticies">
             <img src={receta1} alt="Noticia 2" className="newsImage" />
+            </Link>
             <div>
               <p className="newsTextStyle1">Título de la noticia 2</p>
               <p className="newsTextStyle2">Descripción de la noticia 2</p>
@@ -158,7 +167,9 @@ function Home() {
             </div>
           </div>
           <div className="newsItem">
+            <Link to="/Noticies">
             <img src={receta1} alt="Noticia 3" className="newsImage" />
+            </Link>
             <div>
               <p className="newsTextStyle1">Título de la noticia 3</p>
               <p className="newsTextStyle2">Descripción de la noticia 3</p>

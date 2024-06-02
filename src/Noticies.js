@@ -1,5 +1,5 @@
 // Noticies.js
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Header from "./header";
 import './noticies.css';
@@ -18,6 +18,9 @@ import Aceite_virgen from './Assets/Images/oli_aceite_virgen.jpg';
 import Footer from './components/footer'
 
 function Noticies() {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+      }, []);
     const photos = [
         { 
             url: fotoLicor, 

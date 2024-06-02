@@ -30,7 +30,6 @@ function Cart({ cart, closeCart, increaseQuantity, decreaseQuantity, removeItem 
                     <button onClick={() => increaseQuantity(index)}>+</button>
                   </div>
                 </div>
-                <button onClick={() => removeItem(index)}>Eliminar</button>
               </div>
             </li>
           ))}

@@ -1,5 +1,5 @@
 // Recetas.js
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import Header from "./header";
 import './recetas.css';
@@ -18,7 +18,11 @@ import Arroz from './Assets/Images/Arroz_y_pluma.jpg';
 import Moniato from './Assets/Images/Moniato.jpg';
 import Footer from './components/footer'
 
+
 function Recetas() {  // Asegúrate de que el nombre del componente sea Recetas
+    useEffect(() => {
+        window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+      }, []);
     const photos = [
         { 
             url: Pokebowl, 

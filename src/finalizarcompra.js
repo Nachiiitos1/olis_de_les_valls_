@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import './styles.css';
 import Header from './header';
 import Footer from './components/footer';
+import WhatsappButton from './components/whatsapp';
+import BotonDeslizante from './components/botondeslizante';
 
 function FinalizarCompra() {
   const [formData, setFormData] = useState({
@@ -21,6 +23,10 @@ function FinalizarCompra() {
   const [cart, setCart] = useState([]);
   const [uuid, setUuid] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0); // Esto hará que la página se desplace al inicio
+  }, []);
 
   useEffect(() => {
     const storedUuid = localStorage.getItem('uuid');
@@ -177,8 +183,10 @@ function FinalizarCompra() {
           <button type="submit">Realizar pedido</button>
         </form>
       </div>
+      <WhatsappButton />
       <Footer />
     </div>
+    
   );
 }
 
