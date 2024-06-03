@@ -6,7 +6,7 @@ import Footerimage from '../Assets/Images/footerimage.png';
 function Footer() {
   return (
     <footer>
-      <img src={Footerimage}></img>
+      <img className='footerimage' src={Footerimage}></img>
       <div className="footer-content">
 
         <div className="footer-section about">
