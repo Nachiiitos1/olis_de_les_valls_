@@ -17,9 +17,9 @@ body {
     object-fit: cover;
   }
   
-  html {
+ /* html {
     overflow-x: hidden;
-}
+}*/
 
   .textOverlay {
     position: absolute;

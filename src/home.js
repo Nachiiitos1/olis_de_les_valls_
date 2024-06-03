@@ -83,6 +83,47 @@ function Home() {
   const handleButtonClick = (path) => {
     window.location.href = path;
   };
+  const increaseQuantity = async (index) => {
+    const newCart = [...cart];
+    newCart[index].cantidad += 1;
+    setCart(newCart);
+
+    try {
+      const docRef = doc(db, 'carts', uuid);
+      await setDoc(docRef, { items: newCart }, { merge: true });
+    } catch (error) {
+      console.error("Error updating cart: ", error);
+    }
+  };
+
+  const decreaseQuantity = async (index) => {
+    const newCart = [...cart];
+    if (newCart[index].cantidad > 1) {
+      newCart[index].cantidad -= 1;
+    } else {
+      newCart.splice(index, 1);
+    }
+    setCart(newCart);
+
+    try {
+      const docRef = doc(db, 'carts', uuid);
+      await setDoc(docRef, { items: newCart }, { merge: true });
+    } catch (error) {
+      console.error("Error updating cart: ", error);
+    }
+  };
+  const removeItem = async (index) => {
+    const newCart = [...cart];
+    newCart.splice(index, 1);
+    setCart(newCart);
+
+    try {
+      const docRef = doc(db, 'carts', uuid);
+      await setDoc(docRef, { items: newCart }, { merge: true });
+    } catch (error) {
+      console.error("Error updating cart: ", error);
+    }
+  };
 
   return (
     <div>
@@ -183,9 +224,9 @@ function Home() {
         <Cart
           cart={cart}
           closeCart={closeCart}
-          increaseQuantity={() => {}}
-          decreaseQuantity={() => {}}
-          removeItem={() => {}}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+          removeItem={removeItem}
         />
       )}
       <CartButton openCart={openCart} />
