@@ -596,7 +596,8 @@ button.selected-product {
 /* Añadir este bloque de estilos a tu archivo CSS existente */
 
 .finalize-purchase-button {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
@@ -606,7 +607,7 @@ button.selected-product {
 }
 
 .finalize-purchase-button:hover {
-  background-color: #45a049;
+  background-color: #325c34;
 }
 
 /*tienda*//* styles.css */
