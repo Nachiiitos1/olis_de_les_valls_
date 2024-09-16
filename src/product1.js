@@ -65,7 +65,7 @@ function Product1() {
           console.log("No such document!");
         }
       } catch (error) {
-        console.error("Error fetching document: ", error);
+        console.error("Error fetchingg document: ", error);
       }
     };
 
