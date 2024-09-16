@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './header.css';
 import logo from './Assets/Images/logofondo.png';
 import { Link } from 'react-router-dom';
-import './Noticies';
 
 function Header({ toggleCart }) {
   const [texts, setTexts] = useState(["ENVIAMENT GRATUÏT ", "ATENCIÓ AL CLIENT: 654091283 "]);
@@ -33,14 +32,14 @@ function Header({ toggleCart }) {
             <div className='green-box'>
             <Link to="/tienda" className="text">Tienda</Link>
             </div>
-            <Link to="/NuestrosAceites" className="text">Nuestros aceites</Link>
-            <Link to="/Historia" className="text">Historia</Link>
+            <Link to="/NuestrosAceites" className="text">EMPTY</Link>
+            <Link to="/Historia" className="text">EMPTY</Link>
             <Link to="/" className="image-container">
               <img src={logo} alt="Imagen" className="image" />
             </Link>
-            <Link to="/Recetas" className="text">Recetas</Link>
-            <Link to="/Noticies" className="text">Notícies</Link>
-            <Link to="/Contacte" className="text">Contacto</Link>
+            <Link to="/Recetas" className="text">EMPTY</Link>
+            <Link to="/Noticies" className="text">EMPTY</Link>
+            <Link to="/Contacte" className="text">EMPTY</Link>
           </div>
         </div>
       </header>

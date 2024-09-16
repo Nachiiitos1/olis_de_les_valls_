@@ -53,14 +53,14 @@ function HeaderTienda() {
             <div className='green-box'>
             <Link to="/tienda" className="text">Tienda</Link>
             </div>
-            <Link to="/NuestrosAceites" className="text">Nuestros aceites</Link>
-            <Link to="/Historia" className="text">Historia</Link>
+            <Link to="/NuestrosAceites" className="text">EMPTY</Link>
+            <Link to="/Historia" className="text">EMPTY</Link>
             <Link to="/" className="image-container">
               <img src={logo} alt="Imagen" className="image" />
             </Link>
-            <Link to="/Recetas" className="text">Recetas</Link>
-            <Link to="/Noticies" className="text">Notícies</Link>
-            <Link to="/Contacte" className="text">Contacto</Link>
+            <Link to="/Recetas" className="text">EMPTY</Link>
+            <Link to="/Noticies" className="text">EMPTY</Link>
+            <Link to="/Contacte" className="text">EMPTY</Link>
           </div>
       </header>
     </div>
